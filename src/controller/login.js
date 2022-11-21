@@ -46,16 +46,11 @@ module.exports = async function (req, res, next) {
     });
 
     res
-      .cookie("accessToken", accessToken, {
-        httpOnly: true,
-        secure: false,
-        maxAge: 1000 * 60 * 60 * 24 * 7,
-      })
       .json({
         error: false,
         message: "User logged in successfully.",
         status: 200,
-        accessToken
+        accessToken,
       })
       .end();
   } catch (err) {
