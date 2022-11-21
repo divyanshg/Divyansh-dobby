@@ -6,7 +6,7 @@ const startServer = require("./app");
 
 const port = process.env.PORT || 3000;
 
-startServer(port).then((app) => {
+startServer().then((app) => {
   app.listen(port, () => {
     console.log(`Server is running on port ${port}`);
   });

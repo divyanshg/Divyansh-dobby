@@ -10,7 +10,7 @@ const UsersRouter = require("./routes/users");
 
 const ErrorHandler = require("./utils/errorHandler");
 
-const startServer = async (port) => {
+const startServer = async () => {
   const app = express();
 
   await connectDb();
