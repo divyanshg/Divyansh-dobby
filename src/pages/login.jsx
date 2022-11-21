@@ -18,6 +18,7 @@ function Login() {
   const handleSubmit = (e) => {
     e.preventDefault();
     login(email, password).then((res) => {
+      localStorage.setItem("accessToken", res.data.accessToken);
       setIsAuthenticated(true);
       navigate(from, {
         replace: true,
