@@ -17,7 +17,7 @@ const startServer = async () => {
 
   app.use(
     cors({
-      origin: "https://divyansh-dobby.vercel.app/",
+      origin: "https://divyansh-dobby.vercel.app",
       credentials: true,
     })
   );
