@@ -55,6 +55,7 @@ module.exports = async function (req, res, next) {
         error: false,
         message: "User logged in successfully.",
         status: 200,
+        accessToken
       })
       .end();
   } catch (err) {
