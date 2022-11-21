@@ -19,5 +19,6 @@ export const AuthProvider = ({ children }) => {
     [isAuthenticated]
   );
 
+  // provider
   return <AuthContext.Provider value={auth}>{children}</AuthContext.Provider>;
 };
