@@ -12,6 +12,9 @@ export default axios.create({
 export const axiosPrivate = axios.create({
   baseURL,
   timeout: 1000,
-  headers: { "Content-Type": "application/json" },
+  headers: {
+    "Content-Type": "application/json",
+    Authorization: `Bearer ${localStorage.getItem("accessToken")}`,
+  },
   withCredentials: true,
 });
