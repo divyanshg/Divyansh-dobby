@@ -2,6 +2,7 @@ const express = require("express");
 const isAuthenticated = require("./middleware/isAuthenticated");
 const connectDb = require("./db");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 
 const AuthRouter = require("./routes/auth");
 const UploadRouter = require("./routes/upload");
@@ -14,6 +15,7 @@ const startServer = async (port) => {
 
   await connectDb();
 
+  app.use(cors());
   app.use(cookieParser());
   app.use(express.json());
 
