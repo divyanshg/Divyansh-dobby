@@ -1,7 +1,9 @@
 const jwt = require("../utils/jwt");
 
 async function isAuthenticated(req, res, next) {
-  const accessToken = req.cookies.accessToken;
+  const accessToken =
+    req.cookies.accessToken || req.headers["Authorization"].split(" ")[1];
+
   if (!accessToken) {
     next({
       status: 401,
