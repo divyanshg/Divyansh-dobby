@@ -13,5 +13,5 @@ export const axiosPrivate = axios.create({
   baseURL,
   timeout: 1000,
   headers: { "Content-Type": "application/json" },
-  creadentials: true,
+  withCredentials: true,
 });
