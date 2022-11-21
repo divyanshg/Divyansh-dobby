@@ -5,6 +5,8 @@ module.exports = function (err, req, res, next) {
 
   let message = errorToBeSent ? errorMessage : "Internal server error";
 
+  console.log(err);
+
   if (!errorToBeSent)
     console.log(`Error: ${errorStatus} - ${JSON.stringify(errorMessage)}`);
 
